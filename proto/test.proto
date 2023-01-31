@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "pb/test";
+// define service name
+service AddService {
+  rpc Add (testRequest) returns (testResponse) {}
+}
+
+message testRequest {
+  int64 first = 1;
+  int64 second = 2;
+}
+message testResponse {
+  int64 sum = 1;
+}
